@@ -7,7 +7,7 @@ This is a prototype for what a declarative approach to creating application on t
 ```bash
 git clone https://github.com/JoshuaAmaju/x-server.git
 
-npm i
+pnpm i
 
-npm start
+pnpm start
 ```
