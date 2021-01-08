@@ -1,0 +1,11 @@
+extends ../shared/layout.pug
+
+append head
+  script(src='/js/blog/create.js' defer)
+
+block body
+  form(method='post' action='/blog/create')
+    div
+      textarea(name='post' style='width: 100%;min-height: 10rem;padding: 1rem')
+
+    button(style='margin-top: 1rem') add

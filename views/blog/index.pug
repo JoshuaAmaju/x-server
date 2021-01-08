@@ -1,0 +1,32 @@
+extends ../shared/layout.pug
+
+append head
+  script(src='/js/blog/index.js' defer)
+
+block body
+  div
+    div(style='display: flex;justify-content: flex-end;align-items: center;')
+      button#delete-all delete all posts
+
+      div(style='margin-left: 1rem; padding: 0.3rem 1rem;background: blue;border-radius: 0.3rem')
+        a(href='/create' style='text-decoration: none;color: white') new post
+
+    ul
+      each post in data
+        li
+          a(href='/' + post.id)
+            h2 #{post.title}
+
+          p #{post.body}
+
+          div
+            div
+              span Author: 
+              span #{post.author}
+
+            div
+              span Added on: 
+              span #{post.createdAt}
+
+      else
+        p No posts added yet.

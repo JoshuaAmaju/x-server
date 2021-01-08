@@ -1,0 +1,25 @@
+extends ../shared/layout.pug
+
+append head
+  script(src='/js/blog/post.js' defer)
+
+block body
+  div
+    a(href='/blog') Back
+
+    div
+      h2 #{data.title}
+
+      p #{data.body}
+
+      div
+        div
+          span Author: 
+          span #{data.author}
+
+        div
+          span Added on: 
+          span #{data.createdAt}
+
+        div(style='margin-top: 1rem')
+          button#delete(data-id=data.id) delete
