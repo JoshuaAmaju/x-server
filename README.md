@@ -4,3 +4,10 @@ This is a prototype for what a declarative approach to creating application on t
 
 ## To run it locally
 
+```bash
+git clone https://github.com/JoshuaAmaju/x-server.git
+
+npm i
+
+npm start
+```
